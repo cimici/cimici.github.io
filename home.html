@@ -1,0 +1,155 @@
+<html>
+	<head>
+	<title>Questionario Del Cimici</title>
+	<link rel="stylesheet" href="stile.css">
+	<script>
+			function invia(){
+			var cerchi = document.getElementsByClassName("cerchio");
+			cerchi[0,1,2,3,4,5,6,7,8,9,10].style.backgroundColor = "red";
+			guerra=document.modulo.www.value;
+			america=document.modulo.america.value;
+			cesare=document.modulo.cesare.value;
+			berlino=document.modulo.berlino.value;
+			gemme=document.modulo.gemme.value;
+			batman=document.modulo.batman.value;
+			op=document.modulo.op.value;
+			ninja=document.modulo.ninja.checked;
+			umano=document.modulo.umano.checked;
+			mostro=document.modulo.mostro.checked;
+			pirata=document.modulo.pirata.checked;
+			citta=document.modulo.citta.value;
+			prima=document.modulo.prima.value;
+			seconda=document.modulo.seconda.value;
+			terza=document.modulo.terza.value;
+			quarta=document.modulo.quarta.value;
+			punti=0;
+			if(guerra=="1945"){
+				punti++;
+				document.getElementById("1").style.backgroundColor = "green";
+			}
+			if(america=="1492"){
+				punti++;
+				document.getElementById("2").style.backgroundColor = "green";
+			}
+			if(cesare=="44"){
+				punti++;
+				document.getElementById("3").style.backgroundColor = "green";
+			}
+			if(berlino=="1989"){
+				punti++;
+				document.getElementById("4").style.backgroundColor = "green";
+			}
+			if(gemme=="6"){
+				punti++;
+				document.getElementById("5").style.backgroundColor = "green";
+			}
+			if(batman=="F"){
+				punti++;
+				document.getElementById("6").style.backgroundColor = "green";
+			}
+			if(op=="F"){
+				punti++;
+				document.getElementById("7").style.backgroundColor = "green";
+			}
+			if(ninja && umano && pirata==false && mostro==false){
+				punti++;
+				document.getElementById("8").style.backgroundColor = "green";
+			}
+			if(citta.toLowerCase()=="matelica"){
+				punti++;
+				document.getElementById("9").style.backgroundColor = "green";
+			}
+			if(prima=="2" && seconda=="4" && terza=="1" && quarta=="3"){
+				punti++;
+				document.getElementById("10").style.backgroundColor = "green";
+			}
+			if(punti<7)
+				document.getElementById("destra").innerHTML="Hai fatto "+punti+"/10 punti andrà meglio la prossima volta!<br>Il punteggio è stato inviato all'amministratore, arrivederci.";
+			else
+				document.getElementById("destra").innerHTML="Hai fatto "+punti+"/10 punti bravissimo!<br>Il punteggio è stato inviato all'amministratore, arrivederci.";
+		}
+	</script>
+	</head>
+	<body>
+	<a name="click"></a>
+		<div id="titolo">
+			<h1>QUESTIONARIO SUPREMO DELLA CONOSCENZA<h1>
+		</div>
+		<div id="sinistra">
+			<br><br>
+			<form name="modulo">
+				<fieldset>
+					<legend>Quando è terminata la seconda guerra mondiale?</legend>
+					<span class="cerchio" id="1"></span>
+					<br>ANNO: <input type="text" name="www"><br><br>
+				</fieldset>
+				<fieldset>
+					<legend>Quando è stata scoperta l'america?</legend>
+					<span class="cerchio" id="2"></span>
+					<br>1762 <input type="radio" name="america" value="1762">
+					<br>1492 <input type="radio" name="america" value="1492">
+					<br>1592 <input type="radio" name="america" value="1592">
+					<br>1422 <input type="radio" name="america" value="1422">
+				</fieldset>
+				<fieldset>
+					<legend>Quando è morto Giulio Cesare?</legend>
+					<span class="cerchio" id="3"></span>
+					<br>44 a.C <input type="radio" name="cesare" value="44">
+					<br>42 a.C <input type="radio" name="cesare" value="42">
+					<br>40 a.C <input type="radio" name="cesare" value="40">
+					<br>12 d.C <input type="radio" name="cesare" value="12">
+				</fieldset>
+				<fieldset>
+					<legend>Quando è caduto il muro di berlino?</legend>
+					<span class="cerchio" id="4"></span>
+					<br>ANNO: <input type="text" name="berlino"><br><br>
+				</fieldset>
+				<fieldset>
+					<legend>Quante sono le gemme dell'infinito?</legend>
+					<span class="cerchio" id="5"></span>
+					<br>5<input type="radio" name="gemme" value="5">
+					<br>6<input type="radio" name="gemme" value="6">
+					<br>3<input type="radio" name="gemme" value="3">
+					<br>7<input type="radio" name="gemme" value="7">
+				</fieldset>
+				<fieldset>
+					<legend>Batman è stato morso da un pipistrello?</legend>
+					<span class="cerchio" id="6"></span>
+					<br>V <input type="radio" name="batman" value="V">
+					<br>F <input type="radio" name="batman" value="F">
+				</fieldset>
+				<fieldset>
+					<legend>One piece è l'anime più lungo?</legend>
+					<span class="cerchio" id="7"></span>
+					<br>V <input type="radio" name="op" value="V">
+					<br>F <input type="radio" name="op" value="F">
+				</fieldset>
+				<fieldset>
+					<legend>Naruto è un... (due risposte corrette)</legend>
+					<span class="cerchio" id="8"></span>
+					<br>Ninja <input type="checkbox" name="ninja">
+					<br>Pirata <input type="checkbox" name="pirata">
+					<br>Mostro <input type="checkbox" name="mostro">
+					<br>Umano <input type="checkbox" name="umano">
+				</fieldset>
+				<fieldset>
+					<legend>Meglio matelica o cerreto</legend>
+					<span class="cerchio" id="9"></span>
+					<br>VAI NON SBAGLIARE: <input type="text" name="citta"><br><br>
+				</fieldset>
+				<fieldset>
+					<legend>I MIGLIORI DELLA CLASSE (COLLEGARE I NUMERI 1-4 ALLE LETTERE A-D</legend>
+					<span class="cerchio" id="10"></span>
+					SARA (1)&nbsp;&nbsp;&nbsp; <input type="text" name="prima" size=1>INFORMATICA(A)<br><br>
+					DENIS (2)&nbsp;&nbsp;&nbsp; <input type="text" name="seconda" size=1>RELIGIONE(B)<br><br>
+					MATTEO (3)&nbsp;&nbsp;&nbsp; <input type="text" name="terza" size=1>ECONOMIA AZIENDAE(C)<br><br>
+					DANIELE (4)&nbsp;&nbsp;&nbsp; <input type="text" name="quarta" size=1>MATEMATICA(D)<br><br>
+				</fieldset>
+				<br><a href="#click"><input type="button" value="INVIA" onclick="invia()"></a>
+			</form>
+		</div>
+		<div id="destra">
+			
+		</div>
+	</body>
+</html>
